@@ -2,13 +2,17 @@
   "name": "servico1",
   "version": "1.0.0",
   "description": "servico 1 para teste",
-  "main": "app.js",
+  "engines": {
+    "node": "6.11.2"
+  },
+  "main": "src/server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/server.js"
   },
   "author": "Pedro Alves",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "compression": "1.7.0",
     "consign": "0.1.6",
     "express": "4.15.4",

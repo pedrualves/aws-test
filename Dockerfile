@@ -6,4 +6,5 @@ COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
 
-# docker run -p 8080:8080 --name vdv_container_2 -d vdv_image
+# build image: docker build -t vdv_image .
+# build container: docker run -p 8080:8080 --name vdv_container -d vdv_image
