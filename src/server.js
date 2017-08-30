@@ -7,7 +7,8 @@ const express = require('express'),
     consign = require('consign'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    http = require('http')
+    http = require('http'),
+    path = require('path')
 
 function configExpress() {
     // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/database')
@@ -21,7 +22,7 @@ function configExpress() {
     app.use(bodyParser.json())
 
     consign({
-        cwd: process.cwd() + '\\src',
+        cwd: process.cwd() + path.sep + 'src',
         verbose: process.env.PORT ? false : true
     })
         .include('domain')
