@@ -12,7 +12,7 @@
   "author": "Pedro Alves",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "1.17.2",
     "compression": "1.7.0",
     "consign": "0.1.6",
     "express": "4.15.4",
