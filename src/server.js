@@ -8,7 +8,8 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     http = require('http'),
-    path = require('path')
+    path = require('path'),
+    cors = require('cors')
 
 function configExpress() {
     // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/database')
@@ -16,6 +17,7 @@ function configExpress() {
 
     app.use(helmet())
     app.use(compression())
+    app.use(cors())
     app.use(bodyParser.urlencoded({
         extended: true
     }))
